@@ -4,74 +4,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="StyleKart - Discover trending fashion, apparel, luxury footwear, accessories, and curated lifestyle collections online.">
 
-    <title>StyleKart | Fashion Store</title>
+    <title>StyleKart | Premium Online Fashion & Lifestyle Store</title>
 
-    <!-- CSS file -->
-    <link rel="stylesheet" href="css/navbar.css">
+    <!-- Google Fonts: Playfair Display & Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-    <!-- Google Material Symbols for navbar icons -->
+    <!-- Google Material Symbols for Icons -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
-<body>
+<body id="top">
+
+    <!-- Top Promotional Banner Strip -->
+    <aside class="promo_strip" aria-label="Promotional announcements">
+        <div class="promo_content">
+            <span><span class="promo_badge">Flash Offer</span> Flat &#8377;500 OFF On Your First Order | Use Code: <span
+                    class="promo_code">STYLEFIRST</span></span>
+            <span>â€¢</span>
+            <span>Free Express Shipping on Orders Above &#8377;799</span>
+            <span>â€¢</span>
+            <span>14-Day Hassle-Free Returns & Instant Refunds</span>
+        </div>
+    </aside>
+
+    <!-- Mobile Navigation Checkbox Toggle (CSS Checkbox Hack) -->
+    <input type="checkbox" id="mobile_nav_toggle" class="nav_toggle_input" aria-label="Toggle navigation menu">
+    <label for="mobile_nav_toggle" class="nav_backdrop" aria-hidden="true"></label>
 
     <!-- ========== NAVBAR START ========== -->
     <header class="navbar">
 
-        <!-- Logo -->
+        <!-- Hamburger Button for Mobile View -->
+        <label for="mobile_nav_toggle" class="hamburger_btn" aria-label="Open navigation menu">
+            <span class="hamburger_bar"></span>
+            <span class="hamburger_bar"></span>
+            <span class="hamburger_bar"></span>
+        </label>
+
+        <!-- Brand Logo -->
         <div class="logo_container">
-            <a href="index.html">
+            <a href="index.html" aria-label="StyleKart Home">
                 <img class="brand_logo" src="assets/images/logo.png" alt="StyleKart Logo">
             </a>
         </div>
 
-        <!-- Navigation links -->
-        <nav class="nav_bar">
-            <a href="#">Men</a>
-            <a href="#">Women</a>
-            <a href="#">Kids</a>
-            <a href="#">Home</a>
-            <a href="#">Beauty</a>
-            <a href="#">Gen Z</a>
-            <a href="#">Studio <sup>New</sup></a>
+        <!-- Navigation Links -->
+        <nav class="nav_bar" aria-label="Primary Categories">
+            <a href="html/men.html">Men</a>
+            <a href="html/women.html">Women</a>
+            <a href="html/kids.html">Kids</a>
+            <a href="html/home-living.html">Home</a>
+            <a href="html/beauty.html">Beauty</a>
+            <a href="html/genz.html">Gen Z</a>
+            <a href="html/studio.html">Studio <sup>New</sup></a>
         </nav>
 
-        <!-- Search bar -->
-        <div class="search_bar">
-            <span class="material-symbols-outlined search_icon">
-                search
-            </span>
-
+        <!-- Search Bar -->
+        <form class="search_bar" action="html/men.html" method="get" role="search">
+            <span class="material-symbols-outlined search_icon" aria-hidden="true">search</span>
             <input class="search_input" type="search" placeholder="Search for products, brands and more"
                 aria-label="Search products">
-        </div>
+        </form>
 
-        <!-- User actions -->
+        <!-- Action Bar: Profile, Wishlist, Bag -->
         <div class="action_bar">
 
-            <!-- Profile -->
-            <a href="#" class="action_container">
-                <span class="material-symbols-outlined action_icon">
-                    person
-                </span>
+            <!-- Profile / Account -->
+            <a href="html/login.html" class="action_container" aria-label="Account Login and Profile">
+                <span class="material-symbols-outlined action_icon" aria-hidden="true">person</span>
                 <span class="action_name">Profile</span>
             </a>
 
             <!-- Wishlist -->
-            <a href="#" class="action_container">
-                <span class="material-symbols-outlined action_icon">
-                    favorite
-                </span>
+            <a href="html/wishlist.html" class="action_container action_wishlist" aria-label="Saved Wishlist Items">
+                <span class="material-symbols-outlined action_icon" aria-hidden="true">favorite</span>
+                <span class="action_badge">3</span>
                 <span class="action_name">Wishlist</span>
             </a>
 
-            <!-- Shopping bag -->
-            <a href="#" class="action_container">
-                <span class="material-symbols-outlined action_icon">
-                    shopping_bag
-                </span>
+            <!-- Shopping Bag -->
+            <a href="html/bag.html" class="action_container action_bag" aria-label="Shopping Bag Items">
+                <span class="material-symbols-outlined action_icon" aria-hidden="true">shopping_bag</span>
+                <span class="action_badge">2</span>
                 <span class="action_name">Bag</span>
             </a>
 
@@ -80,30 +109,721 @@
     </header>
     <!-- ========== NAVBAR END ========== -->
 
-    <!-- Main content -->
+    <!-- Main Content -->
     <main>
 
-        <!-- Promotional banner -->
-        <div class="banner_container">
-            Banner
-        </div>
+        <!-- 1. CSS-Only Auto-Slide Hero Carousel (3 Banners) -->
+        <section class="hero_carousel" aria-label="Featured Fashion Collections">
+            <div class="hero_slider_track">
 
-        <!-- Category heading -->
-        <div class="category_heading">
-            Shop By Category
-        </div>
+                <!-- Slide 1 -->
+                <article class="hero_slide">
+                    <img class="hero_slide_image" src="assets/images/banners/banner_1.jpg"
+                        alt="Spring Summer 2026 Runway Collection" fetchpriority="high">
+                    <div class="hero_slide_content">
+                        <span class="hero_subtitle">Spring / Summer '26</span>
+                        <h1 class="hero_title">Elegance Redefined In Every Stitch</h1>
+                        <p class="hero_description">Discover haute couture aesthetics, breathable linen tailoring, and
+                            effortless silhouettes crafted for modern connoisseurs.</p>
+                        <a href="html/women.html" class="hero_cta">Explore Collection <span
+                                class="material-symbols-outlined">arrow_forward</span></a>
+                    </div>
+                </article>
 
-        <!-- Categories -->
-        <div class="category_items">
-            Categories
-        </div>
+                <!-- Slide 2 -->
+                <article class="hero_slide">
+                    <img class="hero_slide_image" src="assets/images/banners/banner_2.jpg"
+                        alt="Urban Streetwear & Minimalist Tailoring" loading="lazy">
+                    <div class="hero_slide_content">
+                        <span class="hero_subtitle">Urban Street Capsule</span>
+                        <h2 class="hero_title">Modern Streetwear Meets Tailored Luxury</h2>
+                        <p class="hero_description">Elevate your daily rotation with heavyweight cottons, structured
+                            jackets, and heritage sneakers.</p>
+                        <a href="html/men.html" class="hero_cta">Shop Men's Edit <span
+                                class="material-symbols-outlined">arrow_forward</span></a>
+                    </div>
+                </article>
+
+                <!-- Slide 3 -->
+                <article class="hero_slide">
+                    <img class="hero_slide_image" src="assets/images/banners/banner_3.jpg"
+                        alt="The Festive Atelier and Designer Couture" loading="lazy">
+                    <div class="hero_slide_content">
+                        <span class="hero_subtitle">The Festive Atelier</span>
+                        <h2 class="hero_title">Celebratory Splendor & Handcrafted Silks</h2>
+                        <p class="hero_description">Intricate zari embroidery, royal jewel tones, and timeless festive
+                            ensembles crafted for unforgettable celebrations.</p>
+                        <a href="html/women.html" class="hero_cta">Discover Couture <span
+                                class="material-symbols-outlined">arrow_forward</span></a>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Visual Carousel Indicators -->
+            <div class="carousel_indicators" aria-hidden="true">
+                <span class="indicator_dot"></span>
+                <span class="indicator_dot"></span>
+                <span class="indicator_dot"></span>
+            </div>
+        </section>
+
+        <!-- 2. Trending Iconic Brands Grid (12 Brands) -->
+        <section aria-labelledby="trending-brands-heading">
+            <h2 id="trending-brands-heading" class="category_heading">TRENDING ICONIC BRANDS</h2>
+            <p class="section_subtitle">Exclusive seasonal collaborations and flagship designer labels</p>
+            <div class="category_items">
+                <a href="html/men.html" class="sale_item_link" aria-label="Urban Pulse Trend Forward Collection">
+                    <img class="sale_item" src="assets/images/offers/1.png" alt="Trend Forward Collection"
+                        loading="lazy">
+                </a>
+                <a href="html/women.html" class="sale_item_link" aria-label="Aura Luxe Exclusive Brand Offer">
+                    <img class="sale_item" src="assets/images/offers/2.png" alt="Aura Luxe Collection" loading="lazy">
+                </a>
+                <a href="html/men.html" class="sale_item_link" aria-label="Velvet & Vine Premium Wear">
+                    <img class="sale_item" src="assets/images/offers/3.png" alt="Velvet & Vine Styles" loading="lazy">
+                </a>
+                <a href="html/women.html" class="sale_item_link" aria-label="Maverick Denim & Casuals">
+                    <img class="sale_item" src="assets/images/offers/4.png" alt="Maverick Apparel" loading="lazy">
+                </a>
+                <a href="html/genz.html" class="sale_item_link" aria-label="Zenith Active Sportswear">
+                    <img class="sale_item" src="assets/images/offers/5.png" alt="Zenith Active Collection"
+                        loading="lazy">
+                </a>
+                <a href="html/men.html" class="sale_item_link" aria-label="Noir Atelier Luxury Essentials">
+                    <img class="sale_item" src="assets/images/offers/6.png" alt="Noir Atelier Edit" loading="lazy">
+                </a>
+                <a href="html/women.html" class="sale_item_link" aria-label="Terra Craft Organic Linens">
+                    <img class="sale_item" src="assets/images/offers/7.png" alt="Terra Craft Handcrafts" loading="lazy">
+                </a>
+                <a href="html/kids.html" class="sale_item_link" aria-label="Little Voyagers Kids Collection">
+                    <img class="sale_item" src="assets/images/offers/8.png" alt="Little Voyagers Styles" loading="lazy">
+                </a>
+                <a href="html/beauty.html" class="sale_item_link" aria-label="Luminescent Botanicals Beauty">
+                    <img class="sale_item" src="assets/images/offers/9.png" alt="Luminescent Beauty" loading="lazy">
+                </a>
+                <a href="html/home-living.html" class="sale_item_link" aria-label="Artisan Living Home Decor">
+                    <img class="sale_item" src="assets/images/offers/10.png" alt="Artisan Living Accents"
+                        loading="lazy">
+                </a>
+                <a href="html/genz.html" class="sale_item_link" aria-label="Veloce Streetwear Drops">
+                    <img class="sale_item" src="assets/images/offers/11.png" alt="Veloce Streetwear" loading="lazy">
+                </a>
+                <a href="html/studio.html" class="sale_item_link" aria-label="StyleKart Studio Designer Runways">
+                    <img class="sale_item" src="assets/images/offers/12.png" alt="Studio Designer Runways"
+                        loading="lazy">
+                </a>
+            </div>
+        </section>
+
+        <!-- 3. Shop by Category Grid (10 Categories) -->
+        <section aria-labelledby="shop-category-heading">
+            <h2 id="shop-category-heading" class="category_heading">SHOP BY CATEGORY</h2>
+            <p class="section_subtitle">Handpicked wardrobe essentials curated by top personal stylists</p>
+            <div class="category_items">
+                <a href="html/women.html" class="sale_item_link" aria-label="Size-Inclusive Styles">
+                    <img class="sale_item" src="assets/images/categories/1.jpg" alt="Size-Inclusive Styles"
+                        loading="lazy">
+                </a>
+                <a href="html/women.html" class="sale_item_link" aria-label="Ethnic & Festive Wear">
+                    <img class="sale_item" src="assets/images/categories/2.jpg" alt="Ethnic & Festive Wear"
+                        loading="lazy">
+                </a>
+                <a href="html/men.html" class="sale_item_link" aria-label="Men's Casual Wear">
+                    <img class="sale_item" src="assets/images/categories/3.jpg" alt="Men's Casual Wear" loading="lazy">
+                </a>
+                <a href="html/women.html" class="sale_item_link" aria-label="Western Tops & Dresses">
+                    <img class="sale_item" src="assets/images/categories/4.jpg" alt="Western Tops & Dresses"
+                        loading="lazy">
+                </a>
+                <a href="html/men.html" class="sale_item_link" aria-label="Footwear & Sneakers">
+                    <img class="sale_item" src="assets/images/categories/5.jpg" alt="Footwear & Sneakers"
+                        loading="lazy">
+                </a>
+                <a href="html/beauty.html" class="sale_item_link" aria-label="Beauty & Personal Care">
+                    <img class="sale_item" src="assets/images/categories/6.jpg" alt="Beauty & Personal Care"
+                        loading="lazy">
+                </a>
+                <a href="html/genz.html" class="sale_item_link" aria-label="Activewear & Athleisure">
+                    <img class="sale_item" src="assets/images/categories/7.jpg" alt="Activewear & Athleisure"
+                        loading="lazy">
+                </a>
+                <a href="html/kids.html" class="sale_item_link" aria-label="Kids & Baby Apparel">
+                    <img class="sale_item" src="assets/images/categories/8.jpg" alt="Kids & Baby Apparel"
+                        loading="lazy">
+                </a>
+                <a href="html/home-living.html" class="sale_item_link" aria-label="Home Decor & Furnishings">
+                    <img class="sale_item" src="assets/images/categories/9.jpg" alt="Home Decor & Furnishings"
+                        loading="lazy">
+                </a>
+                <a href="html/beauty.html" class="sale_item_link" aria-label="Watches & Accessories">
+                    <img class="sale_item" src="assets/images/categories/10.jpg" alt="Watches & Accessories"
+                        loading="lazy">
+                </a>
+            </div>
+        </section>
+
+        <!-- 4. Deals of the Day Product Cards -->
+        <section class="deals_section" aria-labelledby="deals-heading">
+            <div class="deals_header_wrap">
+                <div>
+                    <h2 id="deals-heading" class="category_heading heading_no_margin">DEALS OF THE DAY</h2>
+                    <p class="section_subtitle subtitle_no_margin">Unbeatable discounts on high-demand premium
+                        essentials</p>
+                </div>
+                <div class="deals_timer_badge" aria-label="Offer timer">
+                    <span class="material-symbols-outlined" aria-hidden="true">timer</span>
+                    <span>Deals End In: <strong>08h : 42m : 15s</strong></span>
+                </div>
+            </div>
+
+            <div class="product_grid">
+
+                <!-- Product 1 -->
+                <article class="product_card">
+                    <div class="product_image_wrap">
+                        <img class="product_image" src="assets/images/products/deal_1.jpg"
+                            alt="Slim-Fit Tailored Italian Linen Shirt" loading="lazy">
+                        <a href="html/wishlist.html" class="product_wishlist_btn" aria-label="Add to Wishlist">
+                            <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
+                        </a>
+                        <div class="product_rating_badge">
+                            <span class="rating_star">â˜…</span> 4.8 | 1.8k
+                        </div>
+                    </div>
+                    <div class="product_info">
+                        <h3 class="product_brand">Aura Luxe</h3>
+                        <p class="product_title"><a href="html/product.html">Slim-Fit Tailored Pure Linen Shirt</a></p>
+                        <div class="product_pricing">
+                            <span class="current_price">&#8377;1,299</span>
+                            <span class="original_price">&#8377;3,499</span>
+                            <span class="discount_percentage">(63% OFF)</span>
+                        </div>
+                        <a href="html/bag.html" class="add_to_bag_btn">
+                            <span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span> Add to Bag
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Product 2 -->
+                <article class="product_card">
+                    <div class="product_image_wrap">
+                        <img class="product_image" src="assets/images/products/deal_2.jpg"
+                            alt="Floral Meadow Bohemian Silk Maxi Dress" loading="lazy">
+                        <a href="html/wishlist.html" class="product_wishlist_btn" aria-label="Add to Wishlist">
+                            <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
+                        </a>
+                        <div class="product_rating_badge">
+                            <span class="rating_star">â˜…</span> 4.9 | 2.4k
+                        </div>
+                    </div>
+                    <div class="product_info">
+                        <h3 class="product_brand">Velvet &amp; Vine</h3>
+                        <p class="product_title"><a href="html/product.html">Floral Meadow Bohemian Silk Dress</a></p>
+                        <div class="product_pricing">
+                            <span class="current_price">&#8377;1,799</span>
+                            <span class="original_price">&#8377;4,499</span>
+                            <span class="discount_percentage">(60% OFF)</span>
+                        </div>
+                        <a href="html/bag.html" class="add_to_bag_btn">
+                            <span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span> Add to Bag
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Product 3 -->
+                <article class="product_card">
+                    <div class="product_image_wrap">
+                        <img class="product_image" src="assets/images/products/deal_3.jpg"
+                            alt="Heritage Chunky Platform Sneakers" loading="lazy">
+                        <a href="html/wishlist.html" class="product_wishlist_btn" aria-label="Add to Wishlist">
+                            <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
+                        </a>
+                        <div class="product_rating_badge">
+                            <span class="rating_star">â˜…</span> 4.7 | 950
+                        </div>
+                    </div>
+                    <div class="product_info">
+                        <h3 class="product_brand">Zenith Active</h3>
+                        <p class="product_title"><a href="html/product.html">Heritage Low-Top Street Sneakers</a></p>
+                        <div class="product_pricing">
+                            <span class="current_price">&#8377;2,199</span>
+                            <span class="original_price">&#8377;5,499</span>
+                            <span class="discount_percentage">(60% OFF)</span>
+                        </div>
+                        <a href="html/bag.html" class="add_to_bag_btn">
+                            <span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span> Add to Bag
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Product 4 -->
+                <article class="product_card">
+                    <div class="product_image_wrap">
+                        <img class="product_image" src="assets/images/products/deal_4.jpg"
+                            alt="Structured Minimalist Wool-Blend Blazer" loading="lazy">
+                        <a href="html/wishlist.html" class="product_wishlist_btn" aria-label="Add to Wishlist">
+                            <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
+                        </a>
+                        <div class="product_rating_badge">
+                            <span class="rating_star">â˜…</span> 4.9 | 1.1k
+                        </div>
+                    </div>
+                    <div class="product_info">
+                        <h3 class="product_brand">Noir Atelier</h3>
+                        <p class="product_title"><a href="html/product.html">Structured Minimalist Slim Blazer</a></p>
+                        <div class="product_pricing">
+                            <span class="current_price">&#8377;2,999</span>
+                            <span class="original_price">&#8377;7,999</span>
+                            <span class="discount_percentage">(62% OFF)</span>
+                        </div>
+                        <a href="html/bag.html" class="add_to_bag_btn">
+                            <span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span> Add to Bag
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Product 5 -->
+                <article class="product_card">
+                    <div class="product_image_wrap">
+                        <img class="product_image" src="assets/images/products/deal_5.jpg"
+                            alt="Handcrafted Pebble Leather Crossbody Bag" loading="lazy">
+                        <a href="html/wishlist.html" class="product_wishlist_btn" aria-label="Add to Wishlist">
+                            <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
+                        </a>
+                        <div class="product_rating_badge">
+                            <span class="rating_star">â˜…</span> 4.8 | 620
+                        </div>
+                    </div>
+                    <div class="product_info">
+                        <h3 class="product_brand">Terra Craft</h3>
+                        <p class="product_title"><a href="html/product.html">Calfskin Leather Crossbody Saddle</a></p>
+                        <div class="product_pricing">
+                            <span class="current_price">&#8377;1,899</span>
+                            <span class="original_price">&#8377;4,999</span>
+                            <span class="discount_percentage">(62% OFF)</span>
+                        </div>
+                        <a href="html/bag.html" class="add_to_bag_btn">
+                            <span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span> Add to Bag
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Product 6 -->
+                <article class="product_card">
+                    <div class="product_image_wrap">
+                        <img class="product_image" src="assets/images/products/deal_6.jpg"
+                            alt="Heavyweight French Terry Cotton Hoodie" loading="lazy">
+                        <a href="html/wishlist.html" class="product_wishlist_btn" aria-label="Add to Wishlist">
+                            <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
+                        </a>
+                        <div class="product_rating_badge">
+                            <span class="rating_star">â˜…</span> 4.6 | 3.2k
+                        </div>
+                    </div>
+                    <div class="product_info">
+                        <h3 class="product_brand">Urban Pulse</h3>
+                        <p class="product_title"><a href="html/product.html">Heavyweight French Terry Hoodie</a></p>
+                        <div class="product_pricing">
+                            <span class="current_price">&#8377;1,499</span>
+                            <span class="original_price">&#8377;3,999</span>
+                            <span class="discount_percentage">(62% OFF)</span>
+                        </div>
+                        <a href="html/bag.html" class="add_to_bag_btn">
+                            <span class="material-symbols-outlined" aria-hidden="true">shopping_bag</span> Add to Bag
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- 5. New Arrivals Scroll-Snap Row -->
+        <section class="arrivals_section" aria-labelledby="new-arrivals-heading">
+            <div class="deals_header_wrap">
+                <div>
+                    <h2 id="new-arrivals-heading" class="category_heading heading_no_margin">NEW ARRIVALS - FRESH DROPS
+                    </h2>
+                    <p class="section_subtitle subtitle_no_margin">Swipe horizontally to explore this week's runway
+                        releases</p>
+                </div>
+                <a href="html/men.html" class="view_all_link">View All New Releases &rarr;</a>
+            </div>
+
+            <div class="scroll_snap_container" tabindex="0" role="region" aria-label="New arrivals carousel">
+
+                <!-- Item 1 -->
+                <article class="product_card scroll_snap_item">
+                    <div class="product_image_wrap">
+                        <img class="product_image" src="assets/images/products/arrival_1.jpg"
+                            alt="Zari Embroidered Silk Kurta Set" loading="lazy">
+                        <a href="html/wishlist.html" class="product_wishlist_btn" aria-label="Add to Wishlist">
+                            <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
+                        </a>
+                    </div>
+                    <div class="product_info">
+                        <h3 class="product_brand">Kavya Heritage</h3>
+                        <p class="product_title"><a href="html/product.html">Zari Embroidered Silk Kurta Set</a></p>
+                        <div class="product_pricing">
+                            <span class="current_price">&#8377;2,899</span>
+                            <span class="original_price">&#8377;5,999</span>
+                            <span class="discount_percentage">(52% OFF)</span>
+                        </div>
+                        <a href="html/bag.html" class="add_to_bag_btn">Add to Bag</a>
+                    </div>
+                </article>
+
+                <!-- Item 2 -->
+                <article class="product_card scroll_snap_item">
+                    <div class="product_image_wrap">
+                        <img class="product_image" src="assets/images/products/arrival_2.jpg"
+                            alt="Vintage Washed Denim Trucker Jacket" loading="lazy">
+                        <a href="html/wishlist.html" class="product_wishlist_btn" aria-label="Add to Wishlist">
+                            <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
+                        </a>
+                    </div>
+                    <div class="product_info">
+                        <h3 class="product_brand">Veloce Street</h3>
+                        <p class="product_title"><a href="html/product.html">Vintage Denim Trucker Jacket</a></p>
+                        <div class="product_pricing">
+                            <span class="current_price">&#8377;1,999</span>
+                            <span class="original_price">&#8377;3,999</span>
+                            <span class="discount_percentage">(50% OFF)</span>
+                        </div>
+                        <a href="html/bag.html" class="add_to_bag_btn">Add to Bag</a>
+                    </div>
+                </article>
+
+                <!-- Item 3 -->
+                <article class="product_card scroll_snap_item">
+                    <div class="product_image_wrap">
+                        <img class="product_image" src="assets/images/products/arrival_3.jpg"
+                            alt="Sapphire Ceramic Chronograph Watch" loading="lazy">
+                        <a href="html/wishlist.html" class="product_wishlist_btn" aria-label="Add to Wishlist">
+                            <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
+                        </a>
+                    </div>
+                    <div class="product_info">
+                        <h3 class="product_brand">Chronos Luxury</h3>
+                        <p class="product_title"><a href="html/product.html">Sapphire Chronograph Watch</a></p>
+                        <div class="product_pricing">
+                            <span class="current_price">&#8377;4,499</span>
+                            <span class="original_price">&#8377;8,999</span>
+                            <span class="discount_percentage">(50% OFF)</span>
+                        </div>
+                        <a href="html/bag.html" class="add_to_bag_btn">Add to Bag</a>
+                    </div>
+                </article>
+
+                <!-- Item 4 -->
+                <article class="product_card scroll_snap_item">
+                    <div class="product_image_wrap">
+                        <img class="product_image" src="assets/images/products/arrival_4.jpg"
+                            alt="Ribbed Knit Wrap Midi Dress" loading="lazy">
+                        <a href="html/wishlist.html" class="product_wishlist_btn" aria-label="Add to Wishlist">
+                            <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
+                        </a>
+                    </div>
+                    <div class="product_info">
+                        <h3 class="product_brand">Silk &amp; Willow</h3>
+                        <p class="product_title"><a href="html/product.html">Ribbed Knit Wrap Midi Dress</a></p>
+                        <div class="product_pricing">
+                            <span class="current_price">&#8377;1,699</span>
+                            <span class="original_price">&#8377;3,499</span>
+                            <span class="discount_percentage">(51% OFF)</span>
+                        </div>
+                        <a href="html/bag.html" class="add_to_bag_btn">Add to Bag</a>
+                    </div>
+                </article>
+
+                <!-- Item 5 -->
+                <article class="product_card scroll_snap_item">
+                    <div class="product_image_wrap">
+                        <img class="product_image" src="assets/images/products/arrival_5.jpg"
+                            alt="Handmade Vegan Chelsea Leather Boots" loading="lazy">
+                        <a href="html/wishlist.html" class="product_wishlist_btn" aria-label="Add to Wishlist">
+                            <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
+                        </a>
+                    </div>
+                    <div class="product_info">
+                        <h3 class="product_brand">Cobbler &amp; Co</h3>
+                        <p class="product_title"><a href="html/product.html">Handmade Chelsea Boots</a></p>
+                        <div class="product_pricing">
+                            <span class="current_price">&#8377;2,599</span>
+                            <span class="original_price">&#8377;5,199</span>
+                            <span class="discount_percentage">(50% OFF)</span>
+                        </div>
+                        <a href="html/bag.html" class="add_to_bag_btn">Add to Bag</a>
+                    </div>
+                </article>
+
+                <!-- Item 6 -->
+                <article class="product_card scroll_snap_item">
+                    <div class="product_image_wrap">
+                        <img class="product_image" src="assets/images/products/arrival_6.jpg"
+                            alt="Polarized Retro Acetate Sunglasses" loading="lazy">
+                        <a href="html/wishlist.html" class="product_wishlist_btn" aria-label="Add to Wishlist">
+                            <span class="material-symbols-outlined" aria-hidden="true">favorite</span>
+                        </a>
+                    </div>
+                    <div class="product_info">
+                        <h3 class="product_brand">Solstice Eyewear</h3>
+                        <p class="product_title"><a href="html/product.html">Polarized Retro Sunglasses</a></p>
+                        <div class="product_pricing">
+                            <span class="current_price">&#8377;1,199</span>
+                            <span class="original_price">&#8377;2,399</span>
+                            <span class="discount_percentage">(50% OFF)</span>
+                        </div>
+                        <a href="html/bag.html" class="add_to_bag_btn">Add to Bag</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- 6. Why StyleKart / Trust Badges Section -->
+        <section class="features_section" aria-labelledby="why-stylekart-heading">
+            <div class="features_header">
+                <h2 id="why-stylekart-heading" class="features_header_title">THE STYLEKART PROMISE</h2>
+                <p class="features_header_text">Every order is backed by our customer-first commitment to quality,
+                    authenticity, and peace of mind.</p>
+            </div>
+
+            <div class="features_grid">
+
+                <div class="feature_card">
+                    <div class="feature_icon_wrap">
+                        <span class="material-symbols-outlined" aria-hidden="true">verified</span>
+                    </div>
+                    <h3 class="feature_title">100% Original Products</h3>
+                    <p class="feature_text">Sourced directly from verified atelier houses and certified brand
+                        manufacturers with official warranties.</p>
+                </div>
+
+                <div class="feature_card">
+                    <div class="feature_icon_wrap">
+                        <span class="material-symbols-outlined" aria-hidden="true">published_with_changes</span>
+                    </div>
+                    <h3 class="feature_title">14-Day Free Returns</h3>
+                    <p class="feature_text">Try your garments at home with zero stress. Instant doorstep pickup and
+                        lightning-fast bank refunds.</p>
+                </div>
+
+                <div class="feature_card">
+                    <div class="feature_icon_wrap">
+                        <span class="material-symbols-outlined" aria-hidden="true">local_shipping</span>
+                    </div>
+                    <h3 class="feature_title">Express Doorstep Delivery</h3>
+                    <p class="feature_text">Priority courier dispatch to 19,000+ pin codes with live GPS tracking from
+                        hub to your wardrobe.</p>
+                </div>
+
+                <div class="feature_card">
+                    <div class="feature_icon_wrap">
+                        <span class="material-symbols-outlined" aria-hidden="true">lock</span>
+                    </div>
+                    <h3 class="feature_title">Secure &amp; Contactless</h3>
+                    <p class="feature_text">End-to-end 256-bit encrypted checkout supporting UPI, Credit Cards, Net
+                        Banking, and Cash on Delivery.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 7. Customer Testimonials -->
+        <section class="testimonials_section" aria-labelledby="testimonials-heading">
+            <h2 id="testimonials-heading" class="category_heading heading_no_margin">CLIENT STORIES &amp; REVIEWS</h2>
+            <p class="section_subtitle subtitle_no_margin">Real experiences from our fashion community across India</p>
+
+            <div class="testimonials_grid">
+
+                <article class="testimonial_card">
+                    <div class="testimonial_stars" aria-label="5 out of 5 stars">â˜…â˜…â˜…â˜…â˜…</div>
+                    <blockquote class="testimonial_quote">
+                        "The linen tailored shirt and wool blazer exceeded my expectations. The fabric drape and
+                        stitching precision rival luxury boutique labels."
+                    </blockquote>
+                    <div class="testimonial_author">
+                        <div class="author_avatar">AS</div>
+                        <div>
+                            <div class="author_name">Aarav Sharma</div>
+                            <div class="author_badge"><span class="material-symbols-outlined">check_circle</span>
+                                Verified StyleKart VIP</div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonial_card">
+                    <div class="testimonial_stars" aria-label="5 out of 5 stars">â˜…â˜…â˜…â˜…â˜…</div>
+                    <blockquote class="testimonial_quote">
+                        "StyleKart's curated size-inclusive ethnic dresses are gorgeous. Delivery arrived in Bengaluru
+                        in under 36 hours. Absolute perfection!"
+                    </blockquote>
+                    <div class="testimonial_author">
+                        <div class="author_avatar">PN</div>
+                        <div>
+                            <div class="author_name">Priya Nair</div>
+                            <div class="author_badge"><span class="material-symbols-outlined">check_circle</span>
+                                Verified Buyer</div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonial_card">
+                    <div class="testimonial_stars" aria-label="5 out of 5 stars">â˜…â˜…â˜…â˜…â˜…</div>
+                    <blockquote class="testimonial_quote">
+                        "The smoothest web store experience. No clunky scripts, lightning fast page loads, and exchange
+                        pickup took literally 5 minutes at my door."
+                    </blockquote>
+                    <div class="testimonial_author">
+                        <div class="author_avatar">RM</div>
+                        <div>
+                            <div class="author_name">Rohan Mehta</div>
+                            <div class="author_badge"><span class="material-symbols-outlined">check_circle</span>
+                                Verified Buyer</div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- 8. Newsletter Subscription Section -->
+        <section class="newsletter_section" aria-labelledby="newsletter-heading">
+            <div class="newsletter_card">
+                <span class="newsletter_badge">The Style Club</span>
+                <h2 id="newsletter-heading" class="newsletter_title">BECOME A STYLEKART INSIDER</h2>
+                <p class="newsletter_subtitle">Sign up for early access to runway drops, seasonal trend lookbooks,
+                    secret private sales, and an instant &#8377;500 welcome credit.</p>
+                <form class="newsletter_form" action="#" method="post">
+                    <input class="newsletter_input" type="email" placeholder="Enter your email address" required
+                        aria-label="Email address for newsletter">
+                    <button class="newsletter_submit" type="submit">Subscribe</button>
+                </form>
+                <p class="newsletter_disclaimer">By subscribing, you agree to StyleKart's Privacy Policy. Unsubscribe
+                    whenever you wish with one click.</p>
+            </div>
+        </section>
 
     </main>
 
-    <!-- Footer -->
+    <!-- ========== FOOTER START ========== -->
     <footer>
-        Footer
+        <div class="footer_container">
+
+            <!-- Column 1: ONLINE SHOPPING -->
+            <div class="footer_column">
+                <h3>ONLINE SHOPPING</h3>
+                <a href="html/men.html">Men's Apparel</a>
+                <a href="html/women.html">Women's Collection</a>
+                <a href="html/kids.html">Kids &amp; Teens</a>
+                <a href="html/home-living.html">Home &amp; Living</a>
+                <a href="html/beauty.html">Beauty &amp; Grooming</a>
+                <a href="html/genz.html">Gen Z Wardrobe</a>
+                <a href="html/studio.html">StyleKart Studio</a>
+                <a href="html/contact.html">Gift Vouchers</a>
+            </div>
+
+            <!-- Column 2: CUSTOMER POLICIES -->
+            <div class="footer_column">
+                <h3>CUSTOMER POLICIES</h3>
+                <a href="html/contact.html">Contact Us</a>
+                <a href="html/contact.html">Frequently Asked Questions</a>
+                <a href="html/contact.html">Terms &amp; Conditions</a>
+                <a href="html/contact.html">Terms of Use</a>
+                <a href="html/bag.html">Track Orders</a>
+                <a href="html/contact.html">Shipping &amp; Logistics</a>
+                <a href="html/contact.html">Cancellations &amp; Refunds</a>
+                <a href="html/contact.html">14-Day Returns Policy</a>
+            </div>
+
+            <!-- Column 3: ABOUT STYLEKART -->
+            <div class="footer_column">
+                <h3>ABOUT STYLEKART</h3>
+                <a href="html/contact.html">About Our Atelier</a>
+                <a href="html/contact.html">Careers &amp; Culture</a>
+                <a href="html/contact.html">Corporate Governance</a>
+                <a href="html/contact.html">StyleKart Runway Stories</a>
+                <a href="html/contact.html">Sustainable Fashion Initiative</a>
+                <a href="html/contact.html">Press &amp; Media Kit</a>
+                <a href="html/contact.html">Investor Relations</a>
+            </div>
+
+            <!-- Column 4: APP & TRUST GUARANTEES -->
+            <div class="footer_column footer_extras_column">
+                <div class="app_download_section">
+                    <h3>EXPERIENCE STYLEKART APP</h3>
+                    <div class="app_buttons">
+                        <a href="#" class="app_btn">
+                            <span class="material-symbols-outlined">play_arrow</span>
+                            <span>GET IT ON<br><strong>Google Play</strong></span>
+                        </a>
+                        <a href="#" class="app_btn">
+                            <span class="material-symbols-outlined">phone_iphone</span>
+                            <span>DOWNLOAD ON<br><strong>App Store</strong></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>KEEP IN TOUCH</h3>
+                    <div class="social_links" aria-label="Social media channels">
+                        <a href="#" class="social_icon" aria-label="Instagram">
+                            <span class="material-symbols-outlined">photo_camera</span>
+                        </a>
+                        <a href="#" class="social_icon" aria-label="Facebook">
+                            <span class="material-symbols-outlined">thumb_up</span>
+                        </a>
+                        <a href="#" class="social_icon" aria-label="X Twitter">
+                            <span class="material-symbols-outlined">tag</span>
+                        </a>
+                        <a href="#" class="social_icon" aria-label="YouTube">
+                            <span class="material-symbols-outlined">smart_display</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer_promises">
+                    <div class="promise_item">
+                        <div class="promise_icon">
+                            <span class="material-symbols-outlined">verified</span>
+                        </div>
+                        <div class="promise_text">
+                            <strong>100% ORIGINAL</strong> guarantee for all products at stylekart.com
+                        </div>
+                    </div>
+                    <div class="promise_item">
+                        <div class="promise_icon">
+                            <span class="material-symbols-outlined">published_with_changes</span>
+                        </div>
+                        <div class="promise_text">
+                            <strong>Return within 14 days</strong> of receiving your order with zero questions asked
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr class="footer_divider">
+
+        <div class="footer_bottom">
+            <div class="copyright">&copy; 2026 StyleKart. All rights reserved.</div>
+            <div class="footer_bottom_links">
+                <a href="html/contact.html">Privacy Notice</a>
+                <a href="html/contact.html">Security</a>
+                <a href="html/contact.html">Sitemap</a>
+            </div>
+        </div>
+
     </footer>
+    <!-- ========== FOOTER END ========== -->
+
+    <!-- Floating Back to Top Link -->
+    <a href="#top" class="back_to_top" aria-label="Back to top of page">
+        <span class="material-symbols-outlined" aria-hidden="true">arrow_upward</span>
+    </a>
 
 </body>
 
