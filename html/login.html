@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Login or Signup to StyleKart to unlock exclusive VIP drops, tracked orders & personalized fashion recommendations.">
+    <title>Login / Sign Up | StyleKart</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body id="top">
+
+    <input type="checkbox" id="mobile_nav_toggle" class="nav_toggle_input" aria-label="Toggle navigation menu">
+    <label for="mobile_nav_toggle" class="nav_backdrop" aria-hidden="true"></label>
+
+    <header class="navbar">
+        <label for="mobile_nav_toggle" class="hamburger_btn" aria-label="Open navigation menu">
+            <span class="hamburger_bar"></span><span class="hamburger_bar"></span><span class="hamburger_bar"></span>
+        </label>
+
+        <div class="logo_container">
+            <a href="../index.html" aria-label="StyleKart Home">
+                <img class="brand_logo" src="../assets/images/logo.png" alt="StyleKart Logo">
+            </a>
+        </div>
+
+        <nav class="nav_bar" aria-label="Primary Navigation">
+            <a href="men.html">Men</a>
+            <a href="women.html">Women</a>
+            <a href="kids.html">Kids</a>
+            <a href="home-living.html">Home</a>
+            <a href="beauty.html">Beauty</a>
+            <a href="genz.html">Gen Z</a>
+            <a href="studio.html">Studio <sup>New</sup></a>
+        </nav>
+
+        <form class="search_bar" action="men.html" method="get" role="search">
+            <span class="material-symbols-outlined search_icon" aria-hidden="true">search</span>
+            <input class="search_input" type="search" placeholder="Search for products, brands and more"
+                aria-label="Search products">
+        </form>
+
+        <div class="action_bar">
+            <a href="login.html" class="action_container active" aria-label="Profile and Login">
+                <span class="material-symbols-outlined action_icon" aria-hidden="true">person</span>
+                <span class="action_name">Profile</span>
+            </a>
+            <a href="wishlist.html" class="action_container action_wishlist" aria-label="Wishlist">
+                <span class="material-symbols-outlined action_icon" aria-hidden="true">favorite</span>
+                <span class="action_badge">3</span>
+                <span class="action_name">Wishlist</span>
+            </a>
+            <a href="bag.html" class="action_container action_bag" aria-label="Shopping Bag">
+                <span class="material-symbols-outlined action_icon" aria-hidden="true">shopping_bag</span>
+                <span class="action_badge">2</span>
+                <span class="action_name">Bag</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="auth_page_wrapper">
+        <div class="auth_card">
+
+            <div class="auth_banner">
+                <span class="auth_banner_tag">StyleKart</span>
+                <h1 class="auth_banner_title">Login or Register</h1>
+            </div>
+
+            <div class="auth_body">
+                <form class="auth_form" action="../index.html" method="get">
+                    <div class="auth_input_group">
+                        <label for="user_identifier" class="auth_label">Mobile Number or Email</label>
+                        <input id="user_identifier" class="auth_input" type="text" placeholder="user@gmail.com"
+                            required>
+                    </div>
+
+                    <div class="auth_input_group">
+                        <label for="user_pass" class="auth_label">Password / One-Time Passcode</label>
+                        <input id="user_pass" class="auth_input" type="password" placeholder="*************" required>
+                    </div>
+
+                    <p class="auth_terms">
+                        By continuing, you agree to StyleKart's <a href="contact.html">Terms of Use</a> &amp; <a
+                            href="contact.html">Privacy Notice</a>.
+                    </p>
+
+                    <button class="auth_submit_btn" type="submit">CONTINUE</button>
+                </form>
+
+                <div class="auth_divider"><span>OR CONTINUE WITH</span></div>
+
+                <div class="social_auth_btns">
+                    <a href="../index.html" class="social_auth_btn">
+                        <span class="material-symbols-outlined">globe</span> Continue with Google
+                    </a>
+                    <a href="../index.html" class="social_auth_btn">
+                        <span class="material-symbols-outlined">shield</span> Continue with Apple
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer_bottom">
+            <div class="copyright">&copy; 2026 StyleKart. All rights reserved.</div>
+            <div class="footer_bottom_links">
+                <a href="../index.html">Home</a>
+                <a href="contact.html">Help Center</a>
+                <a href="contact.html">Privacy Notice</a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#top" class="back_to_top" aria-label="Back to top">
+        <span class="material-symbols-outlined" aria-hidden="true">arrow_upward</span>
+    </a>
+
+</body>
+
+</html>
