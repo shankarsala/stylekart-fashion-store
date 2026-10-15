@@ -1,27 +1,9 @@
-/* =====================================
-   1. GLOBAL RESET
-===================================== */
+/* ==========================================================================
+   STYLEKART - NAVBAR CSS
+   Sticky Navbar, Center-Growing Nav Underlines, Search Bar, Action Bar
+   ========================================================================== */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* =====================================
-   2. BODY STYLES
-===================================== */
-
-body {
-  font-family: Arial, sans-serif;
-  color: #282c3f;
-  background-color: #ffffff;
-}
-
-/* =====================================
-   3. NAVBAR CONTAINER
-===================================== */
-
+/* 1. NAVBAR CONTAINER */
 .navbar {
   width: 100%;
   min-height: 80px;
@@ -33,41 +15,44 @@ body {
   gap: 20px;
 
   background-color: #ffffff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
 
   position: sticky;
   top: 0;
   z-index: 1000;
+  backdrop-filter: blur(8px);
 }
 
-/* =====================================
-   4. LOGO
-===================================== */
-
+/* 2. LOGO */
 .logo_container {
+  display: flex;
+  align-items: center;
   flex-shrink: 0;
 }
 
 .brand_logo {
   display: block;
   width: 150px;
-  height: 45px;
+  height: 48px;
   object-fit: contain;
+  transition: transform var(--transition-fast, 0.2s ease);
 }
 
-/* =====================================
-   5. NAVIGATION LINKS
-===================================== */
+.brand_logo:hover {
+  transform: scale(1.02);
+}
 
+/* 3. NAVIGATION LINKS */
 .nav_bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 28px;
   flex-shrink: 0;
 }
 
 .nav_bar a {
+  position: relative;
   color: #282c3f;
   font-size: 13px;
   letter-spacing: 0.3px;
@@ -75,60 +60,83 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
-
-  transition: color 0.2s ease;
+  padding: 12px 0;
+  display: inline-flex;
+  align-items: center;
+  transition: color var(--transition-fast, 0.2s ease);
 }
 
-/* Navigation hover effect */
+/* Navigation link underline growing from center */
+.nav_bar a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background-color: #ff3f6c;
+  border-radius: 2px 2px 0 0;
+  transition: width 0.25s ease, left 0.25s ease;
+  transform: translateX(-50%);
+}
+
 .nav_bar a:hover {
+  color: #ff3f6c;
+}
+
+.nav_bar a:hover::after,
+.nav_bar a.active::after {
+  width: 100%;
+}
+
+.nav_bar a.active {
   color: #ff3f6c;
 }
 
 /* Studio NEW label */
 .nav_bar sup {
   color: #ff3f6c;
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 700;
+  margin-left: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-/* =====================================
-   6. SEARCH BAR
-===================================== */
-
+/* 4. SEARCH BAR */
 .search_bar {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 
   flex: 1;
-  min-width: 150px;
-  max-width: 400px;
+  min-width: 180px;
+  max-width: 480px;
 
-  padding: 10px 14px;
+  padding: 11px 16px;
 
   background-color: #f5f5f6;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: 6px;
 
-  transition:
-    border-color 0.2s ease,
-    background-color 0.2s ease;
+  transition: border-color var(--transition-fast, 0.2s ease),
+              background-color var(--transition-fast, 0.2s ease),
+              box-shadow var(--transition-fast, 0.2s ease);
 }
 
-/* Search bar focus effect */
 .search_bar:focus-within {
   border-color: #ff3f6c;
   background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(255, 63, 108, 0.15);
 }
 
-/* Search icon */
 .search_icon {
   color: #696e79;
-  font-size: 22px;
+  font-size: 20px;
   flex-shrink: 0;
+  user-select: none;
 }
 
-/* Search input field */
 .search_input {
   width: 100%;
   min-width: 0;
@@ -139,34 +147,33 @@ body {
 
   color: #282c3f;
   font-family: inherit;
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: 400;
 }
 
-/* Search placeholder */
 .search_input::placeholder {
   color: #696e79;
+  font-size: 13px;
 }
 
-/* =====================================
-   7. ACTION BAR
-===================================== */
-
+/* 5. ACTION BAR */
 .action_bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
-
+  gap: 24px;
   flex-shrink: 0;
 }
 
-/* Individual action link */
 .action_container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3px;
+  gap: 4px;
+  min-width: 44px;
+  min-height: 44px;
 
   color: #282c3f;
   text-decoration: none;
@@ -174,76 +181,75 @@ body {
   font-weight: 700;
   white-space: nowrap;
 
-  transition: color 0.2s ease;
+  transition: color var(--transition-fast, 0.2s ease);
 }
 
-/* Action hover effect */
 .action_container:hover {
   color: #ff3f6c;
 }
 
-/* Action icons */
 .action_icon {
-  font-size: 23px;
+  font-size: 22px;
+  transition: transform var(--transition-fast, 0.2s ease);
 }
 
-/* =====================================
-   8. RESPONSIVE NAVBAR
-===================================== */
-
-@media (max-width: 1200px) {
-  .navbar {
-    flex-wrap: wrap;
-    padding: 15px 3%;
-    gap: 18px;
-  }
-
-  .nav_bar {
-    gap: 14px;
-  }
-
-  .search_bar {
-    order: 4;
-    flex-basis: 100%;
-    max-width: none;
-  }
+/* Heart Pulse on Wishlist hover */
+.action_wishlist:hover .action_icon {
+  animation: heartPulse 0.6s ease;
+  color: #ff3f6c;
 }
 
-/* =====================================
-   9. MOBILE RESPONSIVENESS
-===================================== */
+/* Bag Bounce on Bag hover */
+.action_bag:hover .action_icon {
+  animation: bagBounce 0.6s ease;
+  color: #ff3f6c;
+}
 
-@media (max-width: 600px) {
-  .navbar {
-    gap: 15px;
-  }
+.action_name {
+  line-height: 1;
+}
 
-  .brand_logo {
-    width: 115px;
-    height: auto;
-  }
+/* Badge Counter on Actions */
+.action_badge {
+  position: absolute;
+  top: 2px;
+  right: 6px;
+  background-color: #ff3f6c;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  min-width: 16px;
+  height: 16px;
+  line-height: 16px;
+  border-radius: 8px;
+  text-align: center;
+  padding: 0 4px;
+  box-shadow: 0 2px 4px rgba(255, 63, 108, 0.3);
+}
 
-  .nav_bar {
-    order: 3;
-    flex-basis: 100%;
-    flex-wrap: wrap;
-    gap: 14px;
-  }
+/* 6. HAMBURGER MENU (CSS CHECKBOX HACK) */
+.nav_toggle_input {
+  display: none;
+}
 
-  .nav_bar a {
-    font-size: 11px;
-  }
+.hamburger_btn {
+  display: none;
+  width: 44px;
+  height: 44px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1002;
+  border-radius: 4px;
+}
 
-  .action_bar {
-    gap: 12px;
-    margin-left: auto;
-  }
-
-  .action_container {
-    font-size: 10px;
-  }
-
-  .action_icon {
-    font-size: 21px;
-  }
+.hamburger_bar {
+  width: 22px;
+  height: 2px;
+  background-color: #282c3f;
+  border-radius: 2px;
+  transition: transform var(--transition-normal, 0.3s ease),
+              opacity var(--transition-fast, 0.2s ease);
 }

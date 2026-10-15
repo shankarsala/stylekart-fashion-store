@@ -1,0 +1,211 @@
+/* ==========================================================================
+   STYLEKART - FOOTER CSS
+   Distinct Columns, Social Media Icons, App Downloads, Guarantees, Copyright
+   ========================================================================== */
+
+footer {
+  background-color: #fafbfc;
+  border-top: 1px solid #eaeaec;
+  padding-top: 50px;
+  color: #282c3f;
+  margin-top: 40px;
+}
+
+/* 1. FOOTER CONTAINER (RETAINING ORIGINAL CLASS) */
+.footer_container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 0 5% 50px 5%;
+  max-width: var(--container-max-width, 1440px);
+  margin: 0 auto;
+}
+
+/* 2. FOOTER COLUMN (RETAINING ORIGINAL CLASS) */
+.footer_column {
+  display: flex;
+  flex-direction: column;
+  min-width: 170px;
+  flex: 1;
+}
+
+.footer_column h3 {
+  font-family: var(--font-body, sans-serif);
+  color: #282c3f;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+
+.footer_column a {
+  color: #696b79;
+  font-size: 13.5px;
+  text-decoration: none;
+  padding-bottom: 10px;
+  line-height: 1.4;
+  transition: color var(--transition-fast, 0.2s ease), transform var(--transition-fast, 0.2s ease);
+}
+
+.footer_column a:hover {
+  color: #ff3f6c;
+  transform: translateX(4px);
+}
+
+/* 3. APP DOWNLOAD & SOCIAL SECTION */
+.footer_extras_column {
+  flex: 1.3;
+  min-width: 250px;
+}
+
+.app_download_section {
+  margin-bottom: 24px;
+}
+
+.app_buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.app_btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background-color: #141b2d;
+  color: #ffffff;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* .app_btn:hover {
+  background-color: #ff3f6c;
+  transform: translateY(-2px);
+  color: #000;
+} */
+
+.app_btn span {
+  font-size: 18px;
+}
+
+.social_links {
+  display: flex;
+  gap: 14px;
+  margin-top: 14px;
+  align-items: center;
+}
+
+.social_icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid #eaeaec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #696e79;
+  font-size: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.social_icon:hover {
+  background-color: #ff3f6c;
+  color: #ffffff;
+  border-color: #ff3f6c;
+  transform: translateY(-3px);
+}
+
+/* 4. FOOTER GUARANTEE PROMISES */
+.footer_promises {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.promise_item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.promise_icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff0f3;
+  color: #ff3f6c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.promise_icon .material-symbols-outlined {
+  font-size: 20px;
+}
+
+.promise_text {
+  font-size: 12.5px;
+  color: #696e79;
+  line-height: 1.4;
+}
+
+.promise_text strong {
+  color: #282c3f;
+}
+
+/* 5. DIVIDER & COPYRIGHT (RETAINING ORIGINAL CLASS) */
+.footer_divider {
+  border: none;
+  border-top: 1px solid #eaeaec;
+  margin: 0 5%;
+}
+
+.footer_bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 24px 5%;
+  max-width: var(--container-max-width, 1440px);
+  margin: 0 auto;
+}
+
+.copyright {
+  color: #94969f;
+  font-size: 12px;
+  text-align: left;
+}
+
+.copyright a {
+  color: #ff3f6c;
+  font-weight: 600;
+}
+
+.footer_bottom_links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer_bottom_links a {
+  color: #94969f;
+  font-size: 12px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer_bottom_links a:hover {
+  color: #ff3f6c;
+}
