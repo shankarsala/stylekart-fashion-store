@@ -1,0 +1,332 @@
+/* ==========================================================================
+   STYLEKART - RESPONSIVE CSS
+   Mobile-First & Breakpoints (1200px, 992px, 768px, 600px, 480px)
+   Hamburger Checkbox Hack, Adaptive Grids, 44px Tap Targets
+   ========================================================================== */
+
+/* =====================================
+   1. LARGE DESKTOPS (<= 1200px)
+   ===================================== */
+@media (max-width: 1200px) {
+  .nav_bar {
+    gap: 18px;
+  }
+
+  .nav_bar a {
+    font-size: 12px;
+  }
+
+  .product_grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .features_grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .hero_slide {
+    min-height: 380px;
+  }
+
+  .hero_slide_image {
+    min-height: 380px;
+  }
+
+  .hero_title {
+    font-size: 38px;
+  }
+}
+
+/* =====================================
+   2. TABLETS & SMALL LAPTOPS (<= 992px)
+   ===================================== */
+@media (max-width: 992px) {
+  .navbar {
+    padding: 10px 4%;
+    flex-wrap: wrap;
+    row-gap: 12px;
+  }
+
+  /* Search bar drops to full row below header on tablets */
+  .search_bar {
+    order: 4;
+    flex-basis: 100%;
+    max-width: none;
+    margin-top: 5px;
+  }
+
+  /* Hamburger Button becomes visible */
+  .hamburger_btn {
+    display: flex;
+    order: 1;
+  }
+
+  .logo_container {
+    order: 2;
+  }
+
+  .action_bar {
+    order: 3;
+    margin-left: auto;
+    gap: 16px;
+  }
+
+  /* Mobile Drawer Navigation (CSS Checkbox Hack) */
+  .nav_bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100vh;
+    background-color: #ffffff;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 80px 24px 40px 24px;
+    gap: 0;
+    transform: translateX(-100%);
+    transition: transform var(--transition-smooth, 0.4s cubic-bezier(0.16, 1, 0.3, 1));
+    z-index: 1001;
+    overflow-y: auto;
+  }
+
+  .nav_bar a {
+    width: 100%;
+    padding: 14px 0;
+    border-bottom: 1px solid #f0f0f4;
+    font-size: 14px;
+  }
+
+  .nav_bar a::after {
+    display: none;
+  }
+
+  /* Checkbox Hack - Drawer Open */
+  .nav_toggle_input:checked ~ .navbar .nav_bar {
+    transform: translateX(0);
+  }
+
+  /* Checkbox Hack - Hamburger Transformation into 'X' */
+  .nav_toggle_input:checked ~ .navbar .hamburger_btn .hamburger_bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .nav_toggle_input:checked ~ .navbar .hamburger_btn .hamburger_bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav_toggle_input:checked ~ .navbar .hamburger_btn .hamburger_bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* Drawer Backdrop Overlay */
+  .nav_toggle_input:checked ~ .nav_backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1000;
+  }
+
+  .testimonials_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials_grid .testimonial_card:last-child {
+    grid-column: span 2;
+  }
+}
+
+/* =====================================
+   3. PHABLETS & PORTRAIT TABLETS (<= 768px)
+   ===================================== */
+@media (max-width: 768px) {
+  .hero_slide {
+    min-height: 320px;
+  }
+
+  .hero_slide_image {
+    min-height: 320px;
+  }
+
+  .hero_title {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  .hero_description {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .hero_cta {
+    padding: 10px 22px;
+    font-size: 12px;
+  }
+
+  /* Product Grid: 2 Columns */
+  .product_grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .sale_item {
+    width: calc(50vw - 24px);
+    max-width: 220px;
+    height: auto;
+    aspect-ratio: 3 / 4;
+  }
+
+  .testimonials_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials_grid .testimonial_card:last-child {
+    grid-column: span 1;
+  }
+
+  .footer_container {
+    gap: 30px;
+  }
+
+  .footer_column {
+    flex-basis: 45%;
+  }
+
+  .footer_bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .copyright {
+    text-align: center;
+  }
+}
+
+/* =====================================
+   4. MOBILE DEVICES (<= 600px)
+   ===================================== */
+@media (max-width: 600px) {
+  .navbar {
+    padding: 8px 3%;
+  }
+
+  .brand_logo {
+    width: 120px;
+    height: 40px;
+  }
+
+  .action_bar {
+    gap: 10px;
+  }
+
+  .action_name {
+    display: none;
+  }
+
+  .action_container {
+    min-width: 38px;
+    min-height: 38px;
+  }
+
+  .action_icon {
+    font-size: 24px;
+  }
+
+  .promo_strip {
+    font-size: 11px;
+    padding: 8px 3%;
+  }
+
+  .category_heading {
+    font-size: 18px;
+    margin: 35px 0 15px 4%;
+  }
+
+  .category_heading::after {
+    width: 40px;
+    height: 2px;
+  }
+
+  .section_subtitle {
+    font-size: 12px;
+    margin: -8px 0 18px 4%;
+  }
+
+  .features_grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .newsletter_card {
+    padding: 35px 5%;
+  }
+
+  .newsletter_form {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .newsletter_input,
+  .newsletter_submit {
+    width: 100%;
+    min-height: 44px;
+  }
+
+  .back_to_top {
+    bottom: 20px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* =====================================
+   5. EXTRA SMALL SCREENS (<= 480px)
+   ===================================== */
+@media (max-width: 480px) {
+  .product_grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .product_info {
+    padding: 10px 8px;
+  }
+
+  .product_brand {
+    font-size: 12px;
+  }
+
+  .product_title {
+    font-size: 11.5px;
+  }
+
+  .current_price {
+    font-size: 13px;
+  }
+
+  .original_price {
+    font-size: 11px;
+  }
+
+  .discount_percentage {
+    font-size: 10.5px;
+  }
+
+  .add_to_bag_btn {
+    font-size: 10.5px;
+    padding: 8px 4px;
+  }
+
+  .footer_column {
+    flex-basis: 100%;
+  }
+
+  .app_buttons {
+    flex-direction: column;
+  }
+}
