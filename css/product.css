@@ -1,0 +1,374 @@
+/* ==========================================================================
+   STYLEKART - PRODUCT DETAIL CSS
+   Gallery Grid, Variant Selectors, Pincode Checker, Specifications, Reviews
+   ========================================================================== */
+
+.product_page_layout {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  padding: 30px 4% 80px 4%;
+  max-width: var(--container-max-width, 1440px);
+  margin: 0 auto;
+}
+
+/* 1. PRODUCT GALLERY */
+.product_gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.gallery_item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f5f5f6;
+  aspect-ratio: 3 / 4;
+}
+
+.gallery_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery_item:hover .gallery_image {
+  transform: scale(1.05);
+}
+
+/* 2. PRODUCT DETAILS & BUY BOX */
+.product_details_box {
+  display: flex;
+  flex-direction: column;
+}
+
+.pdp_brand {
+  font-family: var(--font-body, sans-serif);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary, #282c3f);
+  margin-bottom: 6px;
+}
+
+.pdp_title {
+  font-family: var(--font-body, sans-serif);
+  font-size: 18px;
+  color: var(--text-secondary, #696e79);
+  font-weight: 400;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.pdp_rating_box {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border: 1px solid var(--border-medium, #d4d5d9);
+  border-radius: 4px;
+  align-self: flex-start;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.pdp_rating_box .star {
+  color: var(--success-color, #03a685);
+  font-weight: 700;
+}
+
+.pdp_rating_box .count {
+  color: var(--text-muted, #94969f);
+  border-left: 1px solid var(--border-medium, #d4d5d9);
+  padding-left: 8px;
+}
+
+.pdp_divider {
+  border: none;
+  border-top: 1px solid var(--border-light, #eaeaec);
+  margin-bottom: 24px;
+}
+
+/* Pricing Section */
+.pdp_pricing_section {
+  margin-bottom: 24px;
+}
+
+.pdp_price_row {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 6px;
+}
+
+.pdp_current_price {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-primary, #282c3f);
+}
+
+.pdp_original_price {
+  font-size: 18px;
+  color: var(--text-muted, #94969f);
+  text-decoration: line-through;
+}
+
+.pdp_discount_badge {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-color, #ff3f6c);
+}
+
+.tax_notice {
+  font-size: 12px;
+  color: var(--success-color, #03a685);
+  font-weight: 600;
+}
+
+/* Size Selector */
+.pdp_size_section {
+  margin-bottom: 28px;
+}
+
+.size_header_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.size_title {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.size_chart_link {
+  font-size: 13px;
+  color: var(--primary-color, #ff3f6c);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.size_options_grid {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.size_radio_label {
+  cursor: pointer;
+}
+
+.size_radio_input {
+  display: none;
+}
+
+.size_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid var(--border-medium, #d4d5d9);
+  background-color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-primary, #282c3f);
+  transition: all var(--transition-fast, 0.2s ease);
+}
+
+.size_radio_label:hover .size_btn {
+  border-color: var(--primary-color, #ff3f6c);
+}
+
+.size_radio_input:checked + .size_btn {
+  background-color: var(--primary-color, #ff3f6c);
+  color: #ffffff;
+  border-color: var(--primary-color, #ff3f6c);
+  box-shadow: 0 4px 12px rgba(255, 63, 108, 0.3);
+}
+
+/* PDP Action Buttons */
+.pdp_cta_row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.pdp_add_bag_btn {
+  flex: 1.4;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 28px;
+  background-color: var(--primary-color, #ff3f6c);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(255, 63, 108, 0.35);
+  transition: all var(--transition-fast, 0.2s ease);
+}
+
+.pdp_add_bag_btn:hover {
+  background-color: var(--primary-hover, #e0355d);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 63, 108, 0.5);
+  color: #ffffff;
+}
+
+.pdp_wishlist_btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 20px;
+  background-color: #ffffff;
+  border: 1px solid var(--border-medium, #d4d5d9);
+  color: var(--text-primary, #282c3f);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  transition: all var(--transition-fast, 0.2s ease);
+}
+
+.pdp_wishlist_btn:hover {
+  border-color: var(--text-primary, #282c3f);
+  color: var(--primary-color, #ff3f6c);
+  transform: translateY(-2px);
+}
+
+/* Pincode & Delivery Checker */
+.delivery_check_section {
+  background-color: #fafbfc;
+  border: 1px solid var(--border-light, #eaeaec);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 32px;
+}
+
+.delivery_title {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pincode_form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.pincode_input {
+  padding: 10px 14px;
+  border: 1px solid var(--border-medium, #d4d5d9);
+  border-radius: 4px;
+  font-size: 13px;
+  outline: none;
+  width: 180px;
+}
+
+.pincode_input:focus {
+  border-color: var(--primary-color, #ff3f6c);
+}
+
+.pincode_btn {
+  padding: 10px 18px;
+  background-color: #141b2d;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.delivery_info_list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-secondary, #696e79);
+}
+
+.delivery_info_item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.delivery_info_item .material-symbols-outlined {
+  font-size: 18px;
+  color: var(--text-primary, #282c3f);
+}
+
+/* Specifications Grid */
+.specs_section {
+  margin-bottom: 36px;
+}
+
+.specs_title {
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+
+.specs_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.spec_box {
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-light, #eaeaec);
+}
+
+.spec_label {
+  font-size: 12px;
+  color: var(--text-muted, #94969f);
+  margin-bottom: 4px;
+}
+
+.spec_val {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary, #282c3f);
+}
+
+/* =====================================
+   RESPONSIVE PRODUCT DETAIL
+   ===================================== */
+@media (max-width: 992px) {
+  .product_page_layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .product_gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .pdp_cta_row {
+    flex-direction: column;
+  }
+}

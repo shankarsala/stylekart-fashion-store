@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Shop Luxury Skincare, Haircare, Organic Botanical Serums & Designer Fragrances on StyleKart.">
+    <title>Beauty &amp; Personal Care | StyleKart</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/listing.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body id="top">
+
+    <aside class="promo_strip" aria-label="Offers banner">
+        <div class="promo_content">
+            <span><span class="promo_badge">Beauty Glow</span> Buy 2 Get 1 FREE on Organic Botanical Serums &amp; Luxury
+                Perfumes | Code: <span class="promo_code">GLOW26</span></span>
+        </div>
+    </aside>
+
+    <input type="checkbox" id="mobile_nav_toggle" class="nav_toggle_input" aria-label="Toggle navigation menu">
+    <label for="mobile_nav_toggle" class="nav_backdrop" aria-hidden="true"></label>
+
+    <header class="navbar">
+        <label for="mobile_nav_toggle" class="hamburger_btn" aria-label="Open navigation menu">
+            <span class="hamburger_bar"></span><span class="hamburger_bar"></span><span class="hamburger_bar"></span>
+        </label>
+
+        <div class="logo_container">
+            <a href="../index.html" aria-label="StyleKart Home">
+                <img class="brand_logo" src="../assets/images/logo.png" alt="StyleKart Logo">
+            </a>
+        </div>
+
+        <nav class="nav_bar" aria-label="Primary Navigation">
+            <a href="men.html">Men</a>
+            <a href="women.html">Women</a>
+            <a href="kids.html">Kids</a>
+            <a href="home-living.html">Home</a>
+            <a href="beauty.html" class="active">Beauty</a>
+            <a href="genz.html">Gen Z</a>
+            <a href="studio.html">Studio <sup>New</sup></a>
+        </nav>
+
+        <form class="search_bar" action="beauty.html" method="get" role="search">
+            <span class="material-symbols-outlined search_icon" aria-hidden="true">search</span>
+            <input class="search_input" type="search" placeholder="Search for serums, perfumes, lipsticks..."
+                aria-label="Search beauty products">
+        </form>
+
+        <div class="action_bar">
+            <a href="login.html" class="action_container" aria-label="Profile and Login">
+                <span class="material-symbols-outlined action_icon" aria-hidden="true">person</span>
+                <span class="action_name">Profile</span>
+            </a>
+            <a href="wishlist.html" class="action_container action_wishlist" aria-label="Wishlist">
+                <span class="material-symbols-outlined action_icon" aria-hidden="true">favorite</span>
+                <span class="action_badge">3</span>
+                <span class="action_name">Wishlist</span>
+            </a>
+            <a href="bag.html" class="action_container action_bag" aria-label="Shopping Bag">
+                <span class="material-symbols-outlined action_icon" aria-hidden="true">shopping_bag</span>
+                <span class="action_badge">2</span>
+                <span class="action_name">Bag</span>
+            </a>
+        </div>
+    </header>
+
+    <nav class="breadcrumb_bar" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb_separator">/</span>
+        <a href="beauty.html">Beauty &amp; Care</a>
+        <span class="breadcrumb_separator">/</span>
+        <span class="breadcrumb_current">Skincare &amp; Fragrances</span>
+    </nav>
+
+    <div class="listing_header">
+        <div class="category_title_wrap">
+            <h1 class="category_main_title">Beauty &amp; Grooming</h1>
+            <span class="item_count_badge">(940 Items)</span>
+        </div>
+
+        <div class="toolbar_actions">
+            <label for="filter_toggle" class="filter_toggle_btn">
+                <span class="material-symbols-outlined" aria-hidden="true">tune</span> Filter
+            </label>
+
+            <div class="sort_wrapper">
+                <label for="sort_select">Sort by:</label>
+                <select id="sort_select" class="sort_select">
+                    <option value="recommended">Recommended</option>
+                    <option value="newest">What's New</option>
+                    <option value="price_low">Price: Low to High</option>
+                    <option value="price_high">Price: High to Low</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <input type="checkbox" id="filter_toggle" class="filter_toggle_input" aria-label="Toggle Filters">
+    <label for="filter_toggle" class="filter_backdrop" aria-hidden="true"></label>
+
+    <div class="listing_layout">
+
+        <aside class="filter_sidebar" aria-label="Filters">
+            <div class="filter_header_row">
+                <span class="filter_title">Filters</span>
+                <a href="beauty.html" class="clear_filter_btn">CLEAR ALL</a>
+            </div>
+
+            <div class="filter_group">
+                <h3 class="filter_group_title">Category</h3>
+                <div class="filter_list">
+                    <label class="filter_label"><input type="checkbox" class="filter_checkbox" checked> Organic Face
+                        Serums</label>
+                    <label class="filter_label"><input type="checkbox" class="filter_checkbox"> Eau de Parfum &amp;
+                        Scents</label>
+                    <label class="filter_label"><input type="checkbox" class="filter_checkbox"> Luxury Hydrating
+                        Creams</label>
+                    <label class="filter_label"><input type="checkbox" class="filter_checkbox"> Clean Makeup &amp;
+                        Tints</label>
+                </div>
+            </div>
+
+            <div class="filter_group">
+                <h3 class="filter_group_title">Brand</h3>
+                <div class="filter_list">
+                    <label class="filter_label"><input type="checkbox" class="filter_checkbox" checked> Luminescent
+                        Botanicals</label>
+                    <label class="filter_label"><input type="checkbox" class="filter_checkbox"> Velvet Skin Co</label>
+                    <label class="filter_label"><input type="checkbox" class="filter_checkbox"> Aura Luxe Beauty</label>
+                </div>
+            </div>
+        </aside>
+
+        <main class="listing_content">
+            <div class="listing_grid">
+
+                <article class="product_card">
+                    <div class="product_image_wrap">
+                        <img class="product_image" src="../assets/images/products/beauty_1.jpg"
+                            alt="Botanical Glow Restorative Face Serum">
+                        <a href="wishlist.html" class="product_wishlist_btn" aria-label="Add to Wishlist"><span
+                                class="material-symbols-outlined">favorite</span></a>
+                        <div class="product_rating_badge"><span class="rating_star">â˜…</span> 4.9 | 1.8k</div>
+                    </div>
+                    <div class="product_info">
+                        <h3 class="product_brand">Luminescent Botanicals</h3>
+                        <p class="product_title"><a href="product.html">Botanical Glow Hyaluronic Serum</a></p>
+                        <div class="product_pricing">
+                            <span class="current_price">&#8377;1,299</span>
+                            <span class="original_price">&#8377;2,499</span>
+                            <span class="discount_percentage">(48% OFF)</span>
+                        </div>
+                        <a href="bag.html" class="add_to_bag_btn">Add to Bag</a>
+                    </div>
+                </article>
+
+                <article class="product_card">
+                    <div class="product_image_wrap">
+                        <img class="product_image" src="../assets/images/products/beauty_2.jpg"
+                            alt="Velvet Rose Eau De Parfum 100ml" loading="lazy">
+                        <a href="wishlist.html" class="product_wishlist_btn" aria-label="Add to Wishlist"><span
+                                class="material-symbols-outlined">favorite</span></a>
+                        <div class="product_rating_badge"><span class="rating_star">â˜…</span> 4.8 | 920</div>
+                    </div>
+                    <div class="product_info">
+                        <h3 class="product_brand">Velvet Skin Co</h3>
+                        <p class="product_title"><a href="product.html">Velvet Rose Eau De Parfum (100ml)</a></p>
+                        <div class="product_pricing">
+                            <span class="current_price">&#8377;2,499</span>
+                            <span class="original_price">&#8377;4,999</span>
+                            <span class="discount_percentage">(50% OFF)</span>
+                        </div>
+                        <a href="bag.html" class="add_to_bag_btn">Add to Bag</a>
+                    </div>
+                </article>
+
+                <article class="product_card">
+                    <div class="product_image_wrap">
+                        <img class="product_image" src="../assets/images/categories/6.jpg"
+                            alt="Antioxidant Night Repair Creme" loading="lazy">
+                        <a href="wishlist.html" class="product_wishlist_btn" aria-label="Add to Wishlist"><span
+                                class="material-symbols-outlined">favorite</span></a>
+                        <div class="product_rating_badge"><span class="rating_star">â˜…</span> 4.9 | 1.4k</div>
+                    </div>
+                    <div class="product_info">
+                        <h3 class="product_brand">Aura Luxe Beauty</h3>
+                        <p class="product_title"><a href="product.html">Antioxidant Night Repair CrÃ¨me</a></p>
+                        <div class="product_pricing">
+                            <span class="current_price">&#8377;1,799</span>
+                            <span class="original_price">&#8377;3,599</span>
+                            <span class="discount_percentage">(50% OFF)</span>
+                        </div>
+                        <a href="bag.html" class="add_to_bag_btn">Add to Bag</a>
+                    </div>
+                </article>
+
+                <article class="product_card">
+                    <div class="product_image_wrap">
+                        <img class="product_image" src="../assets/images/offers/9.png"
+                            alt="Rose Quartz Face Sculptor Roller" loading="lazy">
+                        <a href="wishlist.html" class="product_wishlist_btn" aria-label="Add to Wishlist"><span
+                                class="material-symbols-outlined">favorite</span></a>
+                        <div class="product_rating_badge"><span class="rating_star">â˜…</span> 4.7 | 450</div>
+                    </div>
+                    <div class="product_info">
+                        <h3 class="product_brand">Luminescent Botanicals</h3>
+                        <p class="product_title"><a href="product.html">Rose Quartz Gua Sha &amp; Roller Kit</a></p>
+                        <div class="product_pricing">
+                            <span class="current_price">&#8377;899</span>
+                            <span class="original_price">&#8377;1,999</span>
+                            <span class="discount_percentage">(55% OFF)</span>
+                        </div>
+                        <a href="bag.html" class="add_to_bag_btn">Add to Bag</a>
+                    </div>
+                </article>
+
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer_container">
+            <div class="footer_column">
+                <h3>ONLINE SHOPPING</h3>
+                <a href="men.html">Men</a>
+                <a href="women.html">Women</a>
+                <a href="kids.html">Kids</a>
+                <a href="home-living.html">Home &amp; Living</a>
+                <a href="beauty.html">Beauty</a>
+                <a href="genz.html">Gen Z</a>
+            </div>
+            <div class="footer_column">
+                <h3>CUSTOMER POLICIES</h3>
+                <a href="contact.html">Contact Us</a>
+                <a href="contact.html">FAQ</a>
+                <a href="bag.html">Track Orders</a>
+                <a href="contact.html">Returns</a>
+            </div>
+            <div class="footer_column">
+                <h3>ABOUT STYLEKART</h3>
+                <a href="contact.html">About Us</a>
+                <a href="contact.html">Sustainability</a>
+            </div>
+            <div class="footer_column footer_extras_column">
+                <div class="footer_promises">
+                    <div class="promise_item">
+                        <div class="promise_icon"><span class="material-symbols-outlined">verified</span></div>
+                        <div class="promise_text"><strong>100% DERMATOLOGICALLY TESTED</strong> authentic beauty</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="footer_divider">
+        <div class="footer_bottom">
+            <div class="copyright">&copy; 2026 StyleKart. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <a href="#top" class="back_to_top" aria-label="Back to top">
+        <span class="material-symbols-outlined" aria-hidden="true">arrow_upward</span>
+    </a>
+
+</body>
+
+</html>

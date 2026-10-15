@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Shop Gen Z Fashion, Streetwear, Oversized Hoodies, Y2K Fits & Chunky Kicks on StyleKart.">
+    <title>Gen Z Wardrobe &amp; Streetwear Drops | StyleKart</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/listing.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body id="top">
+
+    <aside class="promo_strip" aria-label="Offers banner">
+        <div class="promo_content">
+            <span><span class="promo_badge">Gen Z Edit</span> Flat 60% OFF On Streetwear Drops | Code: <span
+                    class="promo_code">GENZSTYLE</span></span>
+        </div>
+    </aside>
+
+    <input type="checkbox" id="mobile_nav_toggle" class="nav_toggle_input" aria-label="Toggle navigation menu">
+    <label for="mobile_nav_toggle" class="nav_backdrop" aria-hidden="true"></label>
+
+    <header class="navbar">
+        <label for="mobile_nav_toggle" class="hamburger_btn" aria-label="Open navigation menu">
+            <span class="hamburger_bar"></span><span class="hamburger_bar"></span><span class="hamburger_bar"></span>
+        </label>
+
+        <div class="logo_container">
+            <a href="../index.html" aria-label="StyleKart Home">
+                <img class="brand_logo" src="../assets/images/logo.png" alt="StyleKart Logo">
+            </a>
+        </div>
+
+        <nav class="nav_bar" aria-label="Primary Navigation">
+            <a href="men.html">Men</a>
+            <a href="women.html">Women</a>
+            <a href="kids.html">Kids</a>
+            <a href="home-living.html">Home</a>
+            <a href="beauty.html">Beauty</a>
+            <a href="genz.html" class="active">Gen Z</a>
+            <a href="studio.html">Studio <sup>New</sup></a>
+        </nav>
+
+        <form class="search_bar" action="genz.html" method="get" role="search">
+            <span class="material-symbols-outlined search_icon" aria-hidden="true">search</span>
+            <input class="search_input" type="search" placeholder="Search for oversized tees, cargos, kicks..."
+                aria-label="Search Gen Z products">
+        </form>
+
+        <div class="action_bar">
+            <a href="login.html" class="action_container" aria-label="Profile and Login">
+                <span class="material-symbols-outlined action_icon" aria-hidden="true">person</span>
+                <span class="action_name">Profile</span>
+            </a>
+            <a href="wishlist.html" class="action_container action_wishlist" aria-label="Wishlist">
+                <span class="material-symbols-outlined action_icon" aria-hidden="true">favorite</span>
+                <span class="action_badge">3</span>
+                <span class="action_name">Wishlist</span>
+            </a>
+            <a href="bag.html" class="action_container action_bag" aria-label="Shopping Bag">
+                <span class="material-symbols-outlined action_icon" aria-hidden="true">shopping_bag</span>
+                <span class="action_badge">2</span>
+                <span class="action_name">Bag</span>
+            </a>
+        </div>
+    </header>
+
+    <nav class="breadcrumb_bar" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb_separator">/</span>
+        <a href="genz.html">Streetwear</a>
+        <span class="breadcrumb_separator">/</span>
+        <span class="breadcrumb_current">Gen Z Capsule</span>
+    </nav>
+
+    <div class="listing_header">
+        <div class="category_title_wrap">
+            <h1 class="category_main_title">Gen Z Streetwear Drops</h1>
+            <span class="item_count_badge">(1,120 Items)</span>
+        </div>
+
+        <div class="toolbar_actions">
+            <label for="filter_toggle" class="filter_toggle_btn">
+                <span class="material-symbols-outlined" aria-hidden="true">tune</span> Filter
+            </label>
+
+            <div class="sort_wrapper">
+                <label for="sort_select">Sort by:</label>
+                <select id="sort_select" class="sort_select">
+                    <option value="recommended">Recommended</option>
+                    <option value="newest">What's New</option>
+                    <option value="price_low">Price: Low to High</option>
+                    <option value="price_high">Price: High to Low</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <input type="checkbox" id="filter_toggle" class="filter_toggle_input" aria-label="Toggle Filters">
+    <label for="filter_toggle" class="filter_backdrop" aria-hidden="true"></label>
+
+    <div class="listing_layout">
+
+        <aside class="filter_sidebar" aria-label="Filters">
+            <div class="filter_header_row">
+                <span class="filter_title">Filters</span>
+                <a href="genz.html" class="clear_filter_btn">CLEAR ALL</a>
+            </div>
+
+            <div class="filter_group">
+                <h3 class="filter_group_title">Category</h3>
+                <div class="filter_list">
+                    <label class="filter_label"><input type="checkbox" class="filter_checkbox" checked> Oversized
+                        Hoodies &amp; Tees</label>
+                    <label class="filter_label"><input type="checkbox" class="filter_checkbox"> Parachute &amp; Cargo
+                        Pants</label>
+                    <label class="filter_label"><input type="checkbox" class="filter_checkbox"> Chunky Retro
+                        Sneakers</label>
+                    <label class="filter_label"><input type="checkbox" class="filter_checkbox"> Acetate
+                        Sunglasses</label>
+                </div>
+            </div>
+
+            <div class="filter_group">
+                <h3 class="filter_group_title">Brand</h3>
+                <div class="filter_list">
+                    <label class="filter_label"><input type="checkbox" class="filter_checkbox" checked> Veloce
+                        Street</label>
+                    <label class="filter_label"><input type="checkbox" class="filter_checkbox"> Zenith Active</label>
+                    <label class="filter_label"><input type="checkbox" class="filter_checkbox"> Urban Pulse</label>
+                </div>
+            </div>
+        </aside>
+
+        <main class="listing_content">
+            <div class="listing_grid">
+
+                <article class="product_card">
+                    <div class="product_image_wrap">
+                        <img class="product_image" src="../assets/images/products/genz_1.jpg"
+                            alt="Cyber Y2K Oversized Graphic Tee">
+                        <a href="wishlist.html" class="product_wishlist_btn" aria-label="Add to Wishlist"><span
+                                class="material-symbols-outlined">favorite</span></a>
+                        <div class="product_rating_badge"><span class="rating_star">â˜…</span> 4.8 | 2.1k</div>
+                    </div>
+                    <div class="product_info">
+                        <h3 class="product_brand">Veloce Street</h3>
+                        <p class="product_title"><a href="product.html">Cyber Y2K Heavyweight Graphic Tee</a></p>
+                        <div class="product_pricing">
+                            <span class="current_price">&#8377;999</span>
+                            <span class="original_price">&#8377;2,499</span>
+                            <span class="discount_percentage">(60% OFF)</span>
+                        </div>
+                        <a href="bag.html" class="add_to_bag_btn">Add to Bag</a>
+                    </div>
+                </article>
+
+                <article class="product_card">
+                    <div class="product_image_wrap">
+                        <img class="product_image" src="../assets/images/products/deal_6.jpg"
+                            alt="Heavyweight French Terry Cotton Hoodie" loading="lazy">
+                        <a href="wishlist.html" class="product_wishlist_btn" aria-label="Add to Wishlist"><span
+                                class="material-symbols-outlined">favorite</span></a>
+                        <div class="product_rating_badge"><span class="rating_star">â˜…</span> 4.7 | 3.2k</div>
+                    </div>
+                    <div class="product_info">
+                        <h3 class="product_brand">Urban Pulse</h3>
+                        <p class="product_title"><a href="product.html">Heavyweight Boxy Fleece Hoodie</a></p>
+                        <div class="product_pricing">
+                            <span class="current_price">&#8377;1,499</span>
+                            <span class="original_price">&#8377;3,999</span>
+                            <span class="discount_percentage">(62% OFF)</span>
+                        </div>
+                        <a href="bag.html" class="add_to_bag_btn">Add to Bag</a>
+                    </div>
+                </article>
+
+                <article class="product_card">
+                    <div class="product_image_wrap">
+                        <img class="product_image" src="../assets/images/products/deal_3.jpg"
+                            alt="Heritage Low-Top Street Sneakers" loading="lazy">
+                        <a href="wishlist.html" class="product_wishlist_btn" aria-label="Add to Wishlist"><span
+                                class="material-symbols-outlined">favorite</span></a>
+                        <div class="product_rating_badge"><span class="rating_star">â˜…</span> 4.7 | 950</div>
+                    </div>
+                    <div class="product_info">
+                        <h3 class="product_brand">Zenith Active</h3>
+                        <p class="product_title"><a href="product.html">Platform Retro Chunky Kicks</a></p>
+                        <div class="product_pricing">
+                            <span class="current_price">&#8377;2,199</span>
+                            <span class="original_price">&#8377;5,499</span>
+                            <span class="discount_percentage">(60% OFF)</span>
+                        </div>
+                        <a href="bag.html" class="add_to_bag_btn">Add to Bag</a>
+                    </div>
+                </article>
+
+                <article class="product_card">
+                    <div class="product_image_wrap">
+                        <img class="product_image" src="../assets/images/products/arrival_6.jpg"
+                            alt="Polarized Retro Acetate Sunglasses" loading="lazy">
+                        <a href="wishlist.html" class="product_wishlist_btn" aria-label="Add to Wishlist"><span
+                                class="material-symbols-outlined">favorite</span></a>
+                        <div class="product_rating_badge"><span class="rating_star">â˜…</span> 4.9 | 1.1k</div>
+                    </div>
+                    <div class="product_info">
+                        <h3 class="product_brand">Solstice Eyewear</h3>
+                        <p class="product_title"><a href="product.html">Polarized Retro Micro Shades</a></p>
+                        <div class="product_pricing">
+                            <span class="current_price">&#8377;1,199</span>
+                            <span class="original_price">&#8377;2,399</span>
+                            <span class="discount_percentage">(50% OFF)</span>
+                        </div>
+                        <a href="bag.html" class="add_to_bag_btn">Add to Bag</a>
+                    </div>
+                </article>
+
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer_container">
+            <div class="footer_column">
+                <h3>ONLINE SHOPPING</h3>
+                <a href="men.html">Men</a>
+                <a href="women.html">Women</a>
+                <a href="kids.html">Kids</a>
+                <a href="home-living.html">Home &amp; Living</a>
+                <a href="beauty.html">Beauty</a>
+                <a href="genz.html">Gen Z</a>
+            </div>
+            <div class="footer_column">
+                <h3>CUSTOMER POLICIES</h3>
+                <a href="contact.html">Contact Us</a>
+                <a href="contact.html">FAQ</a>
+                <a href="bag.html">Track Orders</a>
+                <a href="contact.html">Returns</a>
+            </div>
+            <div class="footer_column">
+                <h3>ABOUT STYLEKART</h3>
+                <a href="contact.html">About Us</a>
+                <a href="contact.html">Sustainability</a>
+            </div>
+            <div class="footer_column footer_extras_column">
+                <div class="footer_promises">
+                    <div class="promise_item">
+                        <div class="promise_icon"><span class="material-symbols-outlined">verified</span></div>
+                        <div class="promise_text"><strong>VERIFIED STREETWEAR</strong> authenticity guaranteed</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="footer_divider">
+        <div class="footer_bottom">
+            <div class="copyright">&copy; 2026 StyleKart. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <a href="#top" class="back_to_top" aria-label="Back to top">
+        <span class="material-symbols-outlined" aria-hidden="true">arrow_upward</span>
+    </a>
+
+</body>
+
+</html>

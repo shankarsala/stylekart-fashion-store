@@ -1,0 +1,409 @@
+/* ==========================================================================
+   STYLEKART - LISTING CSS
+   Breadcrumb, Filter Sidebar (Pure CSS Mobile Drawer), Sort Bar, Product Grid
+   ========================================================================== */
+
+/* 1. BREADCRUMB */
+.breadcrumb_bar {
+  padding: 16px 4%;
+  font-size: 13px;
+  color: var(--text-secondary, #696e79);
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.breadcrumb_bar a {
+  color: var(--text-secondary, #696e79);
+  transition: color var(--transition-fast, 0.2s ease);
+}
+
+.breadcrumb_bar a:hover {
+  color: var(--primary-color, #ff3f6c);
+}
+
+.breadcrumb_separator {
+  color: #d4d5d9;
+}
+
+.breadcrumb_current {
+  font-weight: 600;
+  color: var(--text-primary, #282c3f);
+}
+
+/* 2. CATEGORY HEADER & TOOLBAR */
+.listing_header {
+  padding: 0 4% 16px 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 12px;
+  border-bottom: 1px solid var(--border-light, #eaeaec);
+}
+
+.category_title_wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.category_main_title {
+  font-family: var(--font-heading, Georgia, serif);
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.item_count_badge {
+  font-size: 14px;
+  color: var(--text-muted, #94969f);
+  font-weight: 400;
+}
+
+.toolbar_actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.sort_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-secondary, #696e79);
+}
+
+.sort_select {
+  padding: 8px 14px;
+  border: 1px solid var(--border-medium, #d4d5d9);
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: var(--text-primary, #282c3f);
+  font-size: 13px;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+  transition: border-color var(--transition-fast, 0.2s ease);
+}
+
+.sort_select:focus {
+  border-color: var(--primary-color, #ff3f6c);
+}
+
+/* 3. MOBILE FILTER TOGGLE BUTTON & CHECKBOX HACK */
+.filter_toggle_input {
+  display: none;
+}
+
+.filter_toggle_btn {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background-color: #ffffff;
+  border: 1px solid var(--border-medium, #d4d5d9);
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary, #282c3f);
+  cursor: pointer;
+}
+
+.filter_backdrop {
+  display: none;
+}
+
+/* 4. LISTING LAYOUT */
+.listing_layout {
+  display: flex;
+  padding: 24px 4% 60px 4%;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+/* 5. FILTER SIDEBAR */
+.filter_sidebar {
+  flex: 0 0 250px;
+  background-color: #ffffff;
+  border: 1px solid var(--border-light, #eaeaec);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(40, 44, 63, 0.04);
+  position: sticky;
+  top: 100px;
+}
+
+.filter_header_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-light, #eaeaec);
+}
+
+.filter_title {
+  font-family: var(--font-body, sans-serif);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.clear_filter_btn {
+  font-size: 12px;
+  color: var(--primary-color, #ff3f6c);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.filter_group {
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-light, #eaeaec);
+}
+
+.filter_group:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.filter_group_title {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-primary, #282c3f);
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.filter_list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filter_label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--text-secondary, #696e79);
+  cursor: pointer;
+  user-select: none;
+  transition: color var(--transition-fast, 0.2s ease);
+}
+
+.filter_label:hover {
+  color: var(--text-primary, #282c3f);
+}
+
+.filter_checkbox {
+  accent-color: var(--primary-color, #ff3f6c);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.filter_count {
+  margin-left: auto;
+  font-size: 11px;
+  color: var(--text-muted, #94969f);
+}
+
+/* Color Swatches Filter */
+.color_swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.color_swatch_label {
+  position: relative;
+  cursor: pointer;
+}
+
+.color_swatch_input {
+  display: none;
+}
+
+.color_circle {
+  display: block;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 1px var(--border-medium, #d4d5d9);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.color_swatch_label:hover .color_circle,
+.color_swatch_input:checked + .color_circle {
+  transform: scale(1.15);
+  box-shadow: 0 0 0 2px var(--primary-color, #ff3f6c);
+}
+
+.color_black { background: #141b2d; }
+.color_navy  { background: #1b3b6f; }
+.color_white { background: #ffffff; border-color: #d4d5d9; }
+.color_olive { background: #556b2f; }
+.color_beige { background: #f5f5dc; }
+
+/* Studio Custom Layout */
+.studio_title {
+  font-size: 32px;
+  margin-top: 8px;
+}
+
+.studio_container {
+  padding-bottom: 80px;
+}
+
+.studio_grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.studio_image_wrap {
+  aspect-ratio: 4 / 5;
+}
+
+.studio_editorial_text {
+  font-size: 12.5px;
+  color: var(--text-secondary, #696e79);
+  margin-bottom: 14px;
+}
+
+
+/* 6. LISTING MAIN CONTENT */
+.listing_content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Listing Product Grid */
+.listing_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+/* 7. PAGINATION */
+.pagination_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid var(--border-light, #eaeaec);
+}
+
+.page_btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--border-medium, #d4d5d9);
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: var(--text-primary, #282c3f);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.page_btn:hover,
+.page_btn.active {
+  background-color: var(--primary-color, #ff3f6c);
+  color: #ffffff;
+  border-color: var(--primary-color, #ff3f6c);
+}
+
+/* =====================================
+   RESPONSIVE LISTING
+   ===================================== */
+@media (max-width: 1200px) {
+  .listing_grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+}
+
+@media (max-width: 992px) {
+  .filter_toggle_btn {
+    display: flex;
+  }
+
+  .listing_layout {
+    gap: 0;
+  }
+
+  /* Drawer on Mobile */
+  .filter_sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    background-color: #ffffff;
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.2);
+    z-index: 1050;
+    overflow-y: auto;
+    border-radius: 0;
+    transform: translateX(-100%);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .filter_toggle_input:checked ~ .listing_layout .filter_sidebar {
+    transform: translateX(0);
+  }
+
+  .filter_toggle_input:checked ~ .filter_backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1040;
+  }
+
+  .listing_grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .listing_grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .category_main_title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .listing_header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .toolbar_actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .sort_select {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
